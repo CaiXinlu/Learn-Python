@@ -1,0 +1,64 @@
+#(1)字符串拼接
+str1 = input("请输入一个人的名字")
+str2 = input("请输入一个国家的名字")
+print("世界这么大，{}想去{}看看。".format(str1,str2))
+
+
+#（2）整数序列求和
+n = input("请输入整数N：")
+sum = 0
+for i in range(int(n)):
+    sum += i + 1
+print("1到N求和结果：", sum)
+
+
+#(3)99乘法表输出
+for i in range(1,10):
+    for j in range(1,i+1):
+        print("{}*{}={:2}".format(j,i,i*j), end='')
+    print('')
+
+
+#(4)阶乘计算
+sum, tmp = 0, 1
+for i in range(1,11):
+    tmp*=i
+    sum+=tmp
+print("运算结果是：{}".format(sum))
+
+
+#(5)画五角星
+from turtle import *
+fillcolor("red")
+begin_fill()
+while True:
+    forward(200)
+    right(144)
+    if abs(pos()) < 1:
+        break
+end_fill()
+
+
+#(6)太阳花的绘制
+from turtle import *
+color('red', 'yellow')
+begin_fill()
+while True:
+    forward(200)
+    left(170)
+    if abs(pos()) < 1:
+        break
+end_fill()
+
+done
+
+
+#(7)螺旋线绘制
+import turtle
+import time
+turtle.speed
+turtle.pensize(2)
+for x in range(100):
+    turtle.forward(2*x)
+    turtle.left(90)
+time.sleep(3)
