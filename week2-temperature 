@@ -1,0 +1,10 @@
+#TempConvert.py   注释，易于阅读
+val = input("请输入带温度表示符号的温度值：")  #变量，输入函数
+if val[-1] in ['C','c']:  #分支语句
+    f = 1.8 * float(val[0:-1]) + 32 #缩进，表明层次关系
+    print("转换后的温度为：%.2fF"%f)  #输出函数
+elif val[-1] in ['F','f']:
+    c = (float(val[0:-1]) - 32 / 1.8
+    print("转换后的温度为：%.2fC“%c)
+else:
+    print("输入有误")
