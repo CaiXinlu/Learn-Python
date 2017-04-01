@@ -1,0 +1,19 @@
+import turtle#import为保留字，用来引入外部库，该代码即为引入turtle库（绘制图像的函数库）
+def drawSnake(rad, angle, len, neckrad):#def保留字，定义函数。因delf定义的未经调用不会执行，所以程序程序跳转到main函数中执行
+    for i in range(len):#循环，循环len次再停止，缩进的代码皆为需要循环的部分
+        turtle.circle(rad, angle) #沿圆形轨迹绘图，rad描述圆形轨迹半径的位置（正值左侧，负值右侧）；angle为绘制的弧度值
+        turtle.circle(-rad, angle)
+    turtle.circle(rad, angle/2)
+    turtle.fd(rad)  #直线绘图，参数为距离
+    turtle.circle(neckrad+1, 180)
+    turtle.fd(rad*2/3)
+
+def main():
+    turtle.setup(1300, 800, 0, 0)#启动了图形窗口，括号中定义了宽度，高度及窗口左上角在屏幕中的坐标中的位置
+    pythonsize = 30 #小乌龟运行轨迹的宽度
+    turtle.pensize(pythonsize)  #定义宽度的函数
+    turtle.pencolor("blue") #定义轨迹颜色函数
+    turtle.seth(-40)  #启动时运行的方向，-40相当于320度
+    drawSnake(40, 80,5,pythonsize/2)#程序跳转到drawSnake函数中执行
+main()
+   
